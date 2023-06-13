@@ -28,7 +28,7 @@ app.use('/expenses', expensesRouter);
 app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
-  res.send('Hello');
+  res.send(process.env.CLIENT_URL);
 });
 
 app.listen(PORT, () => {
